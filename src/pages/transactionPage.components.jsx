@@ -1,8 +1,8 @@
 import React from "react";
 import { MDBTable, MDBTableHead, MDBBtn, MDBTableBody } from "mdb-react-ui-kit";
-import EntriesTable from "../tables/EntriesTable.components";
-import PaymentTable from "../tables/paymentTable.component";
-import RentTable from "../tables/RentTable.components";
+import EntriesTable from "../components/tables/EntriesTable.components";
+import PaymentTable from "../components/tables/paymentTable.component";
+import RentTable from "../components/tables/RentTable.components";
 
 const TransactionPage = (props) => {
   const Entries = props.Entries;

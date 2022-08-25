@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function HeaderComponent() {
   return (
     <nav
-      className="navbar bg-primary"
+      className="navbar bg-theme-color"
       style={{ width: "100vw", height: "70px", position: "relative" }}
     >
       <div className="container-fluid">

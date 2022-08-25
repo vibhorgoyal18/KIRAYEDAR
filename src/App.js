@@ -2,10 +2,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import AddFlat from './components/AddFlat.components';
 import HeaderComponent from "./components/header.components";
-import Dashboard from './components/pages/dashboardPage.components';
-import LoginPage from './components/pages/loginPage.components';
-import SignUpPage from './components/pages/signupPage.components';
-import TransactionPage from './components/pages/transactionPage.components';
+import Dashboard from './pages/dashboardPage.components';
+import LoginPage from './pages/loginPage.components';
+import SignUpPage from './pages/signupPage.components';
+import TransactionPage from './pages/transactionPage.components';
 
 
 

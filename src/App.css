@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.text-theme-color{
+  color: cornflowerblue !important;
+}
+
+.bg-theme-color{
+  background-color: cornflowerblue !important;
+}
+
+.btn-outline-theme {
+  color: cornflowerblue !important;
+  border-color: cornflowerblue !important;
+  text-decoration: none !important;
+}
+ .btn-outline-theme:hover{
+   background-color: cornflowerblue !important;
+   color: white !important;
+ }

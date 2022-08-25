@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../tables/Dashboardtable.components";
+import Table from "../components/tables/Dashboardtable.components";
 import { Link } from "react-router-dom"; 
 
 const Dashboard = (props) => {
