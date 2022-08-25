@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import AddFlat from './components/AddFlat.components';
-import HeaderComponent from "./components/header.components";
-import Dashboard from './pages/dashboardPage.components';
-import LoginPage from './pages/loginPage.components';
-import SignUpPage from './pages/signupPage.components';
-import TransactionPage from './pages/transactionPage.components';
+import AddFlat from './components/AddFlat';
+import HeaderComponent from "./components/Header";
+import Dashboard from './pages/Dashboard';
+import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignupPage';
+import TransactionPage from './pages/TransactionPage';
 
 
 
