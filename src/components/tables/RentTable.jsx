@@ -1,4 +1,3 @@
-import { MDBTableBody } from "mdb-react-ui-kit";
 import React from "react";
 
 const RentTable = (props) => {

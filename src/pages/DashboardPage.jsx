@@ -4,12 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faMoneyBill} from "@fortawesome/free-solid-svg-icons";
 import DashboardTable from "../components/tables/DashboardTable";
 
-const Dashboard = (props) => {
-    const flat = props.FlatDetails;
-    let Tdue = 0;
-    for (const flats of flat) {
-        Tdue = flats.RentDue + Tdue;
-    }
+const DashboardPage = (props) => {
     return (
         <div className="container" style={{marginLeft: "50px"}}>
             <div className="border mt-3 p-3" style={{width: "300px"}}>
@@ -41,4 +36,4 @@ const Dashboard = (props) => {
     );
 };
 
-export default Dashboard;
+export default DashboardPage;

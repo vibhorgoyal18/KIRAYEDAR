@@ -1,6 +1,6 @@
 import React from "react";
 
-const FlatDetailsTable = ({ entries }) => {
+const FlatDetailsTable = ({ flatDetails }) => {
   return (
       <table className="table mt-3 table-bordered">
           <thead className="table-primary" align="center">
@@ -17,14 +17,14 @@ const FlatDetailsTable = ({ entries }) => {
           </thead>
           <tbody align="center">
           <tr>
-              <td>Noida 132</td>
-              <td>Noida</td>
-              <td>0987654321</td>
-              <td>Rs 4000</td>
-              <td>Rs 2000</td>
-              <td>234</td>
-              <td>Rs 8000</td>
-              <td>20-08-2022</td>
+              <td>{flatDetails?.flatName??""}</td>
+              <td>{flatDetails?.address??""}</td>
+              <td>{flatDetails?.tenantPhone??""}</td>
+              <td>{flatDetails?.rent??""}</td>
+              <td>{flatDetails?.dues??"3000"}</td>
+              <td>{flatDetails?.electricityConsumed??"134"}</td>
+              <td>{flatDetails?.security??""}</td>
+              <td>{flatDetails?.startDate??""}</td>
           </tr>
           </tbody>
       </table>

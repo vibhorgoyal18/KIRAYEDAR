@@ -1,5 +1,4 @@
 import React from "react";
-import { MDBTableBody } from "mdb-react-ui-kit";
 
 const PaymentTable = ({payments}) => {
   return (

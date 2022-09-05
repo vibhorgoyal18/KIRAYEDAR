@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Link, NavLink, useNavigate} from "react-router-dom";
-import Input from "../components/InputComponent";
+import Input from "../components/Input";
 
 const SignUpPage = () => {
     const [useInfo, setInfo] = useState({

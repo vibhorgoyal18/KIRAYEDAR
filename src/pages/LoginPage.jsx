@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
-import Input from "../components/InputComponent";
+import Input from "../components/Input";
+import {useNavigate} from "react-router-dom";
 
 const LoginPage = () => {
     const [useInfo, setInfo] = useState({
@@ -9,6 +10,14 @@ const LoginPage = () => {
     const handleInputChange = (event) => {
         setInfo({[event.target.id]: event.target.value});
     };
+    const navigate = useNavigate();
+    const login = () => {
+        //get users from firebase
+        //check if username and password entered matches with the users above
+        // if true: navigate to /dashboard
+        navigate("/dashboard");
+        // if false: show error
+    }
 
     return (<div className="d-flex justify-content-center align-items-center" style={{height: "calc(100vh - 70px)"}}>
         <div
@@ -44,6 +53,7 @@ const LoginPage = () => {
                             type="submit"
                             className="btn bg-theme-color text-white mt-4"
                             style={{width: "200px"}}
+                            onClick={login}
                         >
                             Log In
                         </button>

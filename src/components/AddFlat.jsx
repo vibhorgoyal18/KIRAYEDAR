@@ -1,12 +1,11 @@
 import React from "react";
-import { MDBBtn } from "mdb-react-ui-kit";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import Button from "./Button";
 
 const AddFlat = () => {
   const test = () => "";
   return (
     <>
-      {" "}
       <div
         className="card"
         style={{
@@ -156,31 +155,11 @@ const AddFlat = () => {
           </div>
         </form>
         <Link to="/dashboard">
-          {" "}
-          <MDBBtn
-            outline
-            style={{
-              width: "120px",
-              position: "relative",
-              top: "350px",
-              left: "55%",
-            }}
-          >
-            Cancel
-          </MDBBtn>
+            <Button onClick={()=> {}} name={"Cancel"}></Button>
         </Link>
         <Link to="/dashboard">
-          {" "}
-          <MDBBtn
-            style={{
-              position: "relative",
-              width: "120px",
-              top: "310px",
-              left: "78%",
-            }}
-          >
-            PROCEED
-          </MDBBtn>
+            <Button onClick={()=> {}} name={"PROCEED"}></Button>
+
         </Link>
       </div>
     </>
