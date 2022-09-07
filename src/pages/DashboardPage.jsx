@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faMoneyBill} from "@fortawesome/free-solid-svg-icons";
 import DashboardTable from "../components/tables/DashboardTable";
+import Button from "../components/Button";
+import AddPayment from "../components/AddPayment";
+import Modal from "../components/tables/Modal";
+import AddFlat from "../components/AddFlat";
 
 const DashboardPage = (props) => {
+    const [showForm, setShowForm] = useState(false);
     return (
         <div className="container" style={{marginLeft: "50px"}}>
             <div className="border mt-3 p-3" style={{width: "300px"}}>
@@ -21,12 +26,13 @@ const DashboardPage = (props) => {
             </div>
             <div className="row justify-content-end">
                 <div className="col-auto">
-                    <button
-                        className="btn bg-theme-color text-white mt-4"
-                        style={{width: "200px"}}
-                    >
-                        + Add Flat
-                    </button>
+                    <Button onClick={()=> setShowForm(true)} name="+ Add Flat"/>
+                    <Modal
+                        header="Add Flat"
+                        modalVisibility={showForm}
+                        hideModal={() => setShowForm(false)}>
+                        <AddFlat/>
+                    </Modal>
                 </div>
                 <div className="col-12">
                     <DashboardTable/>

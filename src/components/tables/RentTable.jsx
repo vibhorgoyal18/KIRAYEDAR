@@ -1,6 +1,6 @@
 import React from "react";
 
-const RentTable = (props) => {
+const RentTable = ({rentData, flatData}) => {
     return (
         <table className="table table-bordered mt-3">
             <thead className="table-primary" align="center">
@@ -18,30 +18,14 @@ const RentTable = (props) => {
             </tr>
             </thead>
             <tbody align="center">
-            <tr>
-                <td>22-7-2022</td>
-                <td>Noida 132</td>
-                <td>Rs. 2000</td>
-                <td>239</td>
-                <td>Rs 20</td>
-                <td>Rs 4020</td>
-            </tr>
-            <tr>
-                <td>22-7-2022</td>
-                <td>Noida 132</td>
-                <td>Rs. 2000</td>
-                <td>239</td>
-                <td>Rs 20</td>
-                <td>Rs 4020</td>
-            </tr>
-            <tr>
-                <td>22-7-2022</td>
-                <td>Noida 132</td>
-                <td>Rs. 2000</td>
-                <td>239</td>
-                <td>Rs 20</td>
-                <td>Rs 4020</td>
-            </tr>
+            {rentData.map(rent => <tr key={rent.id}>
+                <td>{rent.date}</td>
+                <td>{flatData.flatName}</td>
+                <td>{flatData.rent}</td>
+                <td>{rent.endUnit - rent.startUnit}</td>
+                <td>{(rent.endUnit - rent.startUnit) * flatData.pricePerUnit}</td>
+                <td>{flatData.rent + ((rent.endUnit - rent.startUnit) * flatData.pricePerUnit)}</td>
+            </tr>)}
             </tbody>
         </table>
     );
