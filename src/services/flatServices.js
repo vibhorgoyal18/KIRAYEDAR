@@ -1,3 +1,6 @@
+import db from "../firebase";
+import {addDoc, collection, getDocs} from "firebase/firestore"
+
 const flats = [
     {
         id: 1,
@@ -186,17 +189,40 @@ const rents = [
 
 ]
 
-export function getFlats() {
-    // Get data from firebase
+export async function addFlatToFirebase(flat) {
+    await addDoc(collection(db, "flats"), flat);
+}
+
+export async function getFlats() {
+    const documents = await getDocs(collection(db, "flats"))
+    const flats = documents.docs.map(doc => ({
+        ...doc.data(), id: doc.id
+    }));
+    console.log(flats);
     return flats;
 }
 
-export function getPayments() {
-    // Get data from firebase
+export async function addPaymentToFirebase(payment) {
+    await addDoc(collection(db, "payments"), payment);
+}
+
+export async function getPayments() {
+    const documents = await getDocs(collection(db, "payments"))
+    const payments = documents.docs.map(doc => ({
+        ...doc.data(), id: doc.id
+    }));
+    console.log(payments);
     return payments;
 }
 
-export function getRents() {
-    // Get data from firebase
+export async function addRentToFirebase(rent) {
+    await addDoc(collection(db, "rents"), rent);
+}
+
+export async function getRents() {
+    const documents = await getDocs(collection(db, "rents"))
+    const rents = documents.docs.map(doc => doc.data());
+    console.log(rents);
     return rents;
 }
+

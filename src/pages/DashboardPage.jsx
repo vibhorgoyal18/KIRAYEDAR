@@ -31,7 +31,7 @@ const DashboardPage = (props) => {
                         header="Add Flat"
                         modalVisibility={showForm}
                         hideModal={() => setShowForm(false)}>
-                        <AddFlat/>
+                        <AddFlat hideModal={() => setShowForm(false)}/>
                     </Modal>
                 </div>
                 <div className="col-12">

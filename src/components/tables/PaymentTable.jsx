@@ -14,7 +14,7 @@ const PaymentTable = ({payments, name}) => {
             {payments.map(payment =>
                 <tr key={payment.id}>
                     <td>{payment.date}</td>
-                    <td>{name}</td>
+                    <td>{payment.name}</td>
                     <td>{payment.amount}</td>
                 </tr>)}
             </tbody>

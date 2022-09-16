@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import Input from "./Input";
 import Button from "./Button";
+import {addPaymentToFirebase} from "../services/flatServices";
 
-export default function AddPayment() {
+export default function AddPayment({flatId, hideModal}) {
     const [payment, setPayment] = useState({
-        flatId: "",
+        flatId: flatId,
         date: "",
         amount: "",
         name: ""
@@ -14,6 +15,11 @@ export default function AddPayment() {
         setPayment(payment => ({...payment, [event.target.id]: event.target.value}))
     }
     const addPayment = () => {
+        console.log(payment)
+        addPaymentToFirebase(payment).then(()=>{
+            alert("Payment added successfully!!")
+            hideModal();
+        })
     };
     return (
         <div className="container pb-3">

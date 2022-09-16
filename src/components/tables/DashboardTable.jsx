@@ -4,13 +4,16 @@ import {getFlats, getPayments, getRents} from "../../services/flatServices";
 
 
 const DashboardTable = ({flat}) => {
-    const [flats, setFlats] = useState(getFlats());
-    const [payments, setPayment] = useState(getPayments());
-    const [rents, setRents] = useState(getRents());
+    const [flats, setFlats] = useState([]);
+    const [payments, setPayment] = useState([]);
+    const [rents, setRents] = useState([]);
 
 
 
     useEffect(() => {
+        getFlats().then(dbFlats => {
+            setFlats(dbFlats)
+        })
     }, [])
     return (
         <table className="table table-bordered mt-3">
